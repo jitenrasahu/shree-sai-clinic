@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Sai Dental Clinic | Boudh</title>
+    
+    <!-- SEO & Open Graph Meta Tags -->
+    <meta name="description" content="Shree Sai Dental Clinic in Boudh offers advanced, painless dental care, root canals, and implants by expert Dr. Bhagyaban Meher.">
+    <meta property="og:title" content="Shree Sai Dental Clinic | Boudh">
+    <meta property="og:description" content="Top-rated dental clinic in Boudh providing modern, painless treatments. Book your appointment today!">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Preconnect to external domains for faster DNS resolution -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Critical Image Preload for Hero Section -->
+    <link rel="preload" as="image" href="happy patient.jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Swiper CSS for Slider -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Lucide Icons (Deferred to not block render) -->
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        topbar: '#009ae0', /* Vibrant Logo Blue */
+                        primaryBlue: '#004b87', /* Dark Logo Text Blue */
+                        heroBg: '#e6f5fd', /* Soft light blue for backgrounds */
+                        accentYellow: '#ffc107', /* Warm yellow for CTA buttons */
+                        featureBlue: '#009ae0', /* Matching icons to brand */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for specific overlap effects */
+        .rounded-b-[50px] {
+            border-bottom-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
+        }
+        html {
+            scroll-behavior: smooth; /* Enable smooth scrolling for anchor links */
+            scroll-padding-top: 120px; /* Prevents anchored sections from hiding under sticky header */
+        }
+        
+        /* Reveal Animation Classes */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        /* Floating WhatsApp Pulse Animation */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(0.8); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .whatsapp-float { animation: pulse-ring 2s infinite; }
+    </style>
+
+    <!-- Local Business Structured Data (JSON-LD Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Dentist",
+      "name": "Shree Sai Dental Clinic",
+      "image": "logo.png",
+      "telephone": "+917000181963",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Redhakhol - Boudh - Phulbani Rd, Opp. Big V Mall, Baudhgarh",
+        "addressLocality": "Tetelenga",
+        "addressRegion": "Odisha",
+        "postalCode": "762014",
+        "addressCountry": "IN"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "72"
+      },
+      "sameAs": [
+        "https://www.facebook.com/people/Shree-Sai-Dental-ClinicBoudh/pfbid0x6GqB1AvP57QRhDPX7teSsArEgSN1K18ruYJoJhXMT5qm9uZxEMBzD9LKrvTQADnl/",
+        "https://www.instagram.com/shree_sai_dental_clinic_boudh/"
+      ]
+    }
+    </script>
+</head>
+<body class="bg-[#f4f7f6] text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/917000181963?text=Hello%20Dr.%20Meher%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="whatsapp-float fixed bottom-6 right-6 z-[100] bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center" aria-label="Chat on WhatsApp">
+        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.881-.733-1.476-1.639-1.649-1.935-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="hidden fixed bottom-24 right-8 z-[90] bg-primaryBlue text-white p-3 rounded-xl shadow-lg hover:bg-topbar hover:-translate-y-1 transition-all" aria-label="Back to Top">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Top Bar -->
+    <div class="bg-topbar text-white py-2 px-4 md:px-8 flex justify-between items-center text-xs md:text-sm shadow-sm relative z-30">
+        <div class="flex items-center gap-2 font-medium">
+            <!-- Clickable Phone Group for Mobile -->
+            <a href="tel:+917000181963" class="flex items-center gap-2 hover:underline">
+                <i data-lucide="phone" class="w-3 h-3 md:w-4 md:h-4"></i>
+                <span>+91 7000181963</span>
+            </a>
+        </div>
+        <div class="flex gap-2">
+            <a href="https://www.facebook.com/people/Shree-Sai-Dental-ClinicBoudh/pfbid0x6GqB1AvP57QRhDPX7teSsArEgSN1K18ruYJoJhXMT5qm9uZxEMBzD9LKrvTQADnl/" target="_blank" rel="noopener noreferrer" class="bg-white/20 hover:bg-white/40 transition p-1.5 rounded-sm flex items-center justify-center" aria-label="Facebook">
+                <!-- Official Multi-color Facebook SVG -->
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                    <path d="M15.36 12.07l.53-3.47h-3.33V6.35c0-.95.46-1.87 1.95-1.87h1.37V1.53c-.35-.06-1.46-.14-2.74-.14-2.82 0-4.63 1.7-4.63 4.78v2.43H5.56v3.47h2.95v8.38A12.09 12.09 0 0012 24a11.94 11.94 0 003.52-.52v-7.94h-3.05V12.07h2.89z" fill="#FFF"/>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/shree_sai_dental_clinic_boudh/" target="_blank" rel="noopener noreferrer" class="bg-white/20 hover:bg-white/40 transition p-1.5 rounded-sm flex items-center justify-center" aria-label="Instagram">
+                <!-- Official Multi-color Instagram SVG -->
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig-grad)"/>
+                    <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4z" fill="#FFF"/>
+                    <circle cx="17.5" cy="6.5" r="1.2" fill="#FFF"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7z" fill="#FFF"/>
+                    <defs>
+                        <linearGradient id="ig-grad" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FEC564"/>
+                            <stop offset="0.5" stop-color="#E1306C"/>
+                            <stop offset="1" stop-color="#833AB4"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+            <a href="https://wa.me/917000181963?text=Hello%20Dr.%20Meher%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="bg-white/20 hover:bg-white/40 transition p-1.5 rounded-sm flex items-center justify-center" aria-label="WhatsApp">
+                <!-- Official Multi-color WhatsApp SVG -->
+                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#25D366" d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.25 4.88L2 22l5.24-1.23A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+                    <path fill="#FFF" d="M16.5 13.5c-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.57.13-.17.26-.65.81-.8 1-.15.18-.29.21-.54.08-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.76-.15-.26-.02-.4.1-.53.12-.12.25-.29.38-.44.13-.15.17-.26.25-.44.08-.18.04-.33-.02-.46-.06-.13-.57-1.38-.78-1.89-.2-.5-.4-.43-.57-.44h-.48c-.17 0-.44.06-.67.33-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.02 2.62.13.17 1.77 2.7 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.48-.61 1.69-1.2.21-.59.21-1.1.15-1.21-.06-.11-.23-.18-.48-.3z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white py-3 px-4 md:px-8 flex justify-between items-center shadow-sm relative z-50 sticky top-0">
+        <div class="flex items-center gap-2">
+            <!-- Actual Logo Image -->
+            <a href="#" class="flex items-center gap-3">
+                <img src="logo.png" alt="Shree Sai Dental Clinic Logo" class="h-12 md:h-16 object-contain" width="64" height="64">
+                <div class="flex flex-col">
+                    <span class="text-primaryBlue font-bold text-lg md:text-2xl tracking-tight leading-none uppercase">Shree Sai</span>
+                    <span class="text-topbar font-semibold text-sm md:text-md tracking-widest uppercase">Dental Clinic</span>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="bg-topbar text-white p-2 rounded md:hidden" aria-label="Menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+
+        <!-- Desktop Nav Links -->
+        <div class="hidden md:flex gap-6 font-medium text-primaryBlue">
+            <a href="#home" class="hover:text-topbar transition nav-link">Home</a>
+            <a href="#about" class="hover:text-topbar transition nav-link">About Us</a>
+            <a href="#treatments" class="hover:text-topbar transition nav-link">Treatments</a>
+            <a href="#insights" class="hover:text-topbar transition nav-link">Blog</a>
+            <a href="#contact" class="hover:text-topbar transition nav-link">Contact</a>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Dropdown (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full z-40 shadow-lg">
+        <div class="flex flex-col p-4 text-primaryBlue font-medium gap-4">
+             <a href="#home" class="hover:text-topbar transition">Home</a>
+            <a href="#about" class="hover:text-topbar transition">About Us</a>
+            <a href="#treatments" class="hover:text-topbar transition">Treatments</a>
+            <a href="#insights" class="hover:text-topbar transition">Blog</a>
+            <a href="#contact" class="hover:text-topbar transition">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative w-full h-[550px] md:h-[650px] lg:h-[700px] rounded-b-[40px] md:rounded-b-[50px] overflow-hidden border-b-4 border-topbar/20">
+            <!-- Swiper Background -->
+            <div class="swiper myHeroSwiper absolute inset-0 z-0 h-full w-full bg-heroBg">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide relative flex items-center justify-center overflow-hidden">
+                        <img src="happy patient.jpg" class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none" alt="">
+                        <img src="happy patient.jpg" alt="Happy Patient" class="relative z-10 w-full h-full object-contain object-center md:object-right p-4 md:p-8 drop-shadow-xl" width="800" height="600">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide relative flex items-center justify-center overflow-hidden">
+                        <img src="treatment.jpg" class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none" alt="">
+                        <img src="treatment.jpg" alt="Dental Treatment" class="relative z-10 w-full h-full object-contain object-center md:object-right p-4 md:p-8 drop-shadow-xl" loading="lazy" decoding="async">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide relative flex items-center justify-center overflow-hidden">
+                        <img src="hero Image.jpg" class="absolute inset-0 w-full h-full object-cover blur-2xl opacity-40 scale-110 pointer-events-none" alt="">
+                        <img src="hero Image.jpg" alt="Award Ceremony" class="relative z-10 w-full h-full object-contain object-center md:object-right p-4 md:p-8 drop-shadow-xl" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gradient Overlay for Text Readability -->
+            <div class="absolute inset-0 z-10 bg-gradient-to-r from-white/95 via-white/85 to-white/30 md:to-transparent pointer-events-none"></div>
+
+            <!-- Hero Content -->
+            <div class="relative z-20 max-w-6xl mx-auto h-full flex flex-col justify-center px-4 md:px-12 py-12 md:py-20 pointer-events-none">
+                <div class="md:w-3/5 pointer-events-auto">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-primaryBlue mb-6 leading-tight drop-shadow-sm">Welcome to<br>Shree Sai Dental Clinic</h1>
+                    <p class="text-gray-800 font-medium text-sm md:text-lg mb-8 max-w-lg leading-relaxed drop-shadow-sm">Experience comprehensive dental care under the expert guidance of <strong>Dr. Bhagyaban Meher</strong> (Dental Surgeon & Root Canal Specialist), with a commitment to lasting oral health and painless treatments.</p>
+                    <a href="#contact" class="inline-block bg-accentYellow text-gray-900 font-bold py-3 md:py-4 px-8 text-sm md:text-base uppercase tracking-wider rounded shadow-lg hover:bg-yellow-400 hover:-translate-y-1 transition-all text-center">Book Appointment</a>
+                    
+                    <!-- Patient Avatar Stack -->
+                    <div class="flex items-center mt-12 gap-4">
+                        <div class="flex -space-x-3 hover:space-x-0 transition-all duration-300">
+                            <img src="review 1.png" class="w-12 h-12 rounded-full border-2 border-white object-cover shadow-sm hover:scale-110 transition-transform cursor-pointer relative z-[4]" title="M.P SAHOO" alt="M.P SAHOO" loading="lazy" decoding="async">
+                            <img src="rrvw 2.png" class="w-12 h-12 rounded-full border-2 border-white object-cover shadow-sm hover:scale-110 transition-transform cursor-pointer relative z-[3]" title="Md.Eshfaque Abedin" alt="Md.Eshfaque Abedin" loading="lazy" decoding="async">
+                            <img src="revw3.png" class="w-12 h-12 rounded-full border-2 border-white object-cover shadow-sm hover:scale-110 transition-transform cursor-pointer relative z-[2]" title="Snehasish Panigrahi" alt="Snehasish Panigrahi" loading="lazy" decoding="async">
+                            <img src="revw4.png" class="w-12 h-12 rounded-full border-2 border-white object-cover shadow-sm hover:scale-110 transition-transform cursor-pointer relative z-[1]" title="Asit Kumar Pradhan" alt="Asit Kumar Pradhan" loading="lazy" decoding="async">
+                            <div class="w-12 h-12 rounded-full border-2 border-white bg-topbar text-white flex items-center justify-center text-xs font-bold shadow-sm relative z-0">+</div>
+                        </div>
+                        <div class="cursor-pointer" onclick="document.getElementById('testimonials').scrollIntoView({behavior: 'smooth'})">
+                            <div class="font-bold text-primaryBlue text-xl leading-none drop-shadow-sm flex items-center gap-2">
+                                5,000 +
+                                <span class="text-accentYellow text-sm md:text-base tracking-tighter drop-shadow-sm">★★★★★</span>
+                            </div>
+                            <div class="text-xs md:text-sm text-gray-800 font-bold mt-1 drop-shadow-sm">Happy Patients Smiles</div>
+                            <div class="text-[10px] text-primaryBlue font-semibold mt-0.5 hover:underline">Rated 4.9/5 on Google & Justdial</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Bar -->
+        <section class="max-w-6xl mx-auto px-4 md:px-8 py-12 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="bg-heroBg p-3 rounded-lg text-topbar shrink-0">
+                        <i data-lucide="stethoscope" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-primaryBlue mb-1.5 text-lg">Expert Dentist</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Dr. Bhagyaban Meher combines extensive surgical expertise to provide world-class dental solutions.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="bg-heroBg p-3 rounded-lg text-topbar shrink-0">
+                        <i data-lucide="microscope" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-primaryBlue mb-1.5 text-lg">Advanced Tech</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Our cutting-edge tools and machinery ensure precision, comfort, and efficiency in every single treatment.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="bg-heroBg p-3 rounded-lg text-topbar shrink-0">
+                        <i data-lucide="shield-check" class="w-7 h-7"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-primaryBlue mb-1.5 text-lg">Painless Care</h3>
+                        <p class="text-xs text-gray-500 leading-relaxed">Experience gentle, stress-free dental care with advanced, pain-free techniques for a healthier smile.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="max-w-6xl mx-auto px-4 md:px-8 py-8 flex flex-col md:flex-row gap-12 items-center reveal">
+            <!-- Image with Badge -->
+            <div class="md:w-1/2 relative w-full">
+                <div class="w-full h-[350px] md:h-[450px] rounded-xl overflow-hidden shadow-lg border-4 border-white relative">
+                    <img src="doctor picture.jpg" alt="Dr. Meher at Desk" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                    <!-- Overlay Gradient for better badge visibility -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-primaryBlue/60 to-transparent"></div>
+                </div>
+                <!-- Floating Badge -->
+                <div class="absolute -bottom-6 -right-2 md:-right-6 bg-white border border-gray-100 p-4 rounded-xl shadow-xl w-48 text-center flex flex-col items-center">
+                    <div class="bg-heroBg p-3 rounded-full mb-2">
+                        <i data-lucide="award" class="w-6 h-6 text-topbar"></i>
+                    </div>
+                    <div class="text-sm font-bold leading-tight text-primaryBlue">Top Rated Clinic<br><span class="text-xs text-gray-500 font-normal">in Boudh, Odisha</span></div>
+                </div>
+            </div>
+            
+            <!-- Text Content -->
+            <div class="md:w-1/2 text-center md:text-left pt-8 md:pt-0">
+                <div class="text-xs font-bold tracking-widest text-topbar uppercase mb-2 flex items-center justify-center md:justify-start gap-2">
+                    <span class="w-8 h-0.5 bg-topbar"></span>
+                    About Our Clinic
+                </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue mb-6 leading-tight">Advanced Digital Dentistry in Boudh</h2>
+                <p class="text-sm text-gray-600 mb-4 leading-relaxed">Welcome to <strong>Shree Sai Dental Clinic</strong>, your destination for modern dental care located conveniently opposite Big V Mall. Led by <strong>Dr. Bhagyaban Meher</strong> (BDS, Dental Surgeon, Root Canal Specialist & Implantologist), our clinic embraces the latest in advanced digital dentistry to provide precise, comfortable, and faster treatments for patients of all ages.</p>
+                <p class="text-sm text-gray-600 mb-8 leading-relaxed">We focus on a comprehensive range of services including <strong>24/7 emergency care</strong>, gentle <strong>paediatric dentistry</strong>, <strong>bleeding gums treatment</strong>, and advanced <strong>dental implants</strong>. We also offer customized healthcare packages tailored to your needs and budget. Step into our clinic for a welcoming, pain-free experience designed for your healthy, happy smile.</p>
+                
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#treatments" class="inline-block bg-primaryBlue hover:bg-blue-900 text-white font-bold py-3 px-6 text-sm uppercase tracking-wider rounded transition-colors shadow-md text-center">Discover More</a>
+                    <a href="#gallery" class="inline-block bg-white border-2 border-primaryBlue text-primaryBlue font-bold py-3 px-6 text-sm uppercase tracking-wider rounded hover:bg-heroBg transition-colors text-center">View Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Treatments Grid -->
+        <section id="treatments" class="bg-heroBg/50 py-16 mt-12 border-y border-topbar/10 reveal">
+            <div class="max-w-6xl mx-auto px-4 md:px-8">
+                <div class="text-center mb-12">
+                    <div class="text-xs font-bold tracking-widest text-topbar uppercase mb-2">World Class Services</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue">Dental Treatments We Offer</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Treatment Card 1 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col items-center pb-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div class="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                            <img src="procedure.jpg" alt="Root Canal X-ray" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </div>
+                        <div class="bg-topbar w-16 h-16 rounded-full flex items-center justify-center -mt-8 relative z-10 border-4 border-white shadow-sm group-hover:bg-primaryBlue transition-colors">
+                            <i data-lucide="activity" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-primaryBlue mt-4 mb-3 text-lg">Root Canal Treatment</h3>
+                        <p class="text-sm text-gray-500 text-center px-6 mb-5 flex-grow">Experience quick relief and permanently preserve your natural tooth with our expert, pain-free Root Canal procedures.</p>
+                        <a href="#contact" class="text-xs font-bold tracking-widest text-topbar uppercase flex items-center gap-1 group-hover:text-primaryBlue transition-colors">Book Now <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+
+                    <!-- Treatment Card 2 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col items-center pb-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div class="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                            <img src="before after.jpg" alt="Dental Implant" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </div>
+                        <div class="bg-topbar w-16 h-16 rounded-full flex items-center justify-center -mt-8 relative z-10 border-4 border-white shadow-sm group-hover:bg-primaryBlue transition-colors">
+                            <i data-lucide="settings" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-primaryBlue mt-4 mb-3 text-lg">Dental Implant</h3>
+                        <p class="text-sm text-gray-500 text-center px-6 mb-5 flex-grow">Securely replace missing teeth with permanent metal posts that act exactly like natural, strong tooth roots.</p>
+                        <a href="#contact" class="text-xs font-bold tracking-widest text-topbar uppercase flex items-center gap-1 group-hover:text-primaryBlue transition-colors">Book Now <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+
+                    <!-- Treatment Card 3 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col items-center pb-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div class="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                            <img src="austetic filling.jpg" alt="Aesthetic Filling" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </div>
+                        <div class="bg-topbar w-16 h-16 rounded-full flex items-center justify-center -mt-8 relative z-10 border-4 border-white shadow-sm group-hover:bg-primaryBlue transition-colors">
+                            <i data-lucide="smile-plus" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-primaryBlue mt-4 mb-3 text-lg">Aesthetic Filling</h3>
+                        <p class="text-sm text-gray-500 text-center px-6 mb-5 flex-grow">Seamlessly repair broken, chipped, or decayed front teeth with our advanced tooth-colored aesthetic fillings.</p>
+                        <a href="#contact" class="text-xs font-bold tracking-widest text-topbar uppercase flex items-center gap-1 group-hover:text-primaryBlue transition-colors">Book Now <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+
+                    <!-- Treatment Card 4 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col items-center pb-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div class="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                            <img src="wisdom.jpg" alt="Wisdom Tooth" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </div>
+                        <div class="bg-topbar w-16 h-16 rounded-full flex items-center justify-center -mt-8 relative z-10 border-4 border-white shadow-sm group-hover:bg-primaryBlue transition-colors">
+                            <i data-lucide="scissors" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-primaryBlue mt-4 mb-3 text-lg">Surgical Extractions</h3>
+                        <p class="text-sm text-gray-500 text-center px-6 mb-5 flex-grow">Safe, precise, and highly comfortable surgical treatments and extractions of impacted wisdom teeth.</p>
+                        <a href="#contact" class="text-xs font-bold tracking-widest text-topbar uppercase flex items-center gap-1 group-hover:text-primaryBlue transition-colors">Book Now <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+
+                    <!-- Treatment Card 5 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col items-center pb-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div class="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                            <img src="after before 5.jpg" alt="Crowns" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </div>
+                        <div class="bg-topbar w-16 h-16 rounded-full flex items-center justify-center -mt-8 relative z-10 border-4 border-white shadow-sm group-hover:bg-primaryBlue transition-colors">
+                            <i data-lucide="crown" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-primaryBlue mt-4 mb-3 text-lg">Crowns & Bridges</h3>
+                        <p class="text-sm text-gray-500 text-center px-6 mb-5 flex-grow">Restore the shape and function of damaged teeth with custom-fitted, highly durable crowns and bridges.</p>
+                        <a href="#contact" class="text-xs font-bold tracking-widest text-topbar uppercase flex items-center gap-1 group-hover:text-primaryBlue transition-colors">Book Now <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+
+                    <!-- Treatment Card 6 -->
+                    <div class="bg-white border border-gray-100 rounded-xl overflow-hidden flex flex-col items-center pb-8 hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div class="w-full h-56 overflow-hidden bg-gray-50 flex items-center justify-center p-2">
+                            <img src="teeth 1.jpg" alt="Rehab" class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </div>
+                        <div class="bg-topbar w-16 h-16 rounded-full flex items-center justify-center -mt-8 relative z-10 border-4 border-white shadow-sm group-hover:bg-primaryBlue transition-colors">
+                            <i data-lucide="columns" class="w-7 h-7 text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-primaryBlue mt-4 mb-3 text-lg">Full Mouth Rehab</h3>
+                        <p class="text-sm text-gray-500 text-center px-6 mb-5 flex-grow">Complete, step-by-step restorative dentistry designed to entirely rebuild your smile and chewing ability.</p>
+                        <a href="#contact" class="text-xs font-bold tracking-widest text-topbar uppercase flex items-center gap-1 group-hover:text-primaryBlue transition-colors">Book Now <i data-lucide="chevron-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clinic Environment Gallery Banner -->
+        <section id="gallery" class="max-w-6xl mx-auto px-4 md:px-8 py-16 reveal">
+            <div class="bg-primaryBlue rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row relative">
+                <div class="p-8 md:p-12 md:w-1/2 flex flex-col justify-center relative z-10">
+                    <h2 class="text-3xl font-bold text-white mb-4">State of the Art Facilities</h2>
+                    <p class="text-blue-100 text-sm mb-6 leading-relaxed">Our clinic provides a highly sterile, modern, and comforting environment. From our comfortable waiting areas to our advanced treatment rooms, your care and hygiene are our top priorities.</p>
+                    <a href="#contact" class="inline-block bg-accentYellow text-primaryBlue font-bold py-3 px-6 text-sm uppercase tracking-wider rounded w-max hover:bg-yellow-400 transition-colors">Visit Us Today</a>
+                </div>
+                <div class="md:w-1/2 h-64 md:h-auto">
+                    <img src="clinic interior.jpg" alt="Clinic Interior" class="w-full h-full object-cover" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="bg-heroBg py-16 reveal">
+            <div class="max-w-6xl mx-auto px-4 md:px-8">
+                <div class="text-center mb-12">
+                    <div class="text-xs font-bold tracking-widest text-topbar uppercase mb-2">Success Stories</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue">What People Say</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative flex flex-col">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-topbar/10"></i>
+                        <div class="flex items-center gap-4 mb-6 relative z-10">
+                            <div class="w-12 h-12 bg-topbar/20 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="user" class="w-6 h-6 text-topbar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue text-lg">M.P SAHOO</h4>
+                                <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Local Guide • Verified Patient</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 italic leading-relaxed relative z-10 flex-grow">"Very good dental clinic of boudh district. Treatment is very good with modern technology and the dr.Bhagyaban behaviour is very good, staff is also good. Clinic is very spacious and comfortable. And the fees also affordable."</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-1 text-accentYellow text-sm">
+                            ⭐⭐⭐⭐⭐ <span class="text-gray-500 text-xs font-bold ml-2">Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative flex flex-col">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-topbar/10"></i>
+                        <div class="flex items-center gap-4 mb-6 relative z-10">
+                            <div class="w-12 h-12 bg-topbar/20 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="user" class="w-6 h-6 text-topbar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue text-lg">Snehasish Panigrahi</h4>
+                                <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Verified Patient</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 italic leading-relaxed relative z-10 flex-grow">"Nice dental clinic at Boudh district.Treatment facilities are good. Clinic receptionist is very good and the way the doctor treat is friendly and efficient. They give a detailed explanation about the problem and the solution. I would really recommend this place."</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-1 text-accentYellow text-sm">
+                            ⭐⭐⭐⭐⭐ <span class="text-gray-500 text-xs font-bold ml-2">Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative flex flex-col">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-topbar/10"></i>
+                        <div class="flex items-center gap-4 mb-6 relative z-10">
+                            <div class="w-12 h-12 bg-topbar/20 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="user" class="w-6 h-6 text-topbar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue text-lg">Md.Eshfaque Abedin</h4>
+                                <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Verified Patient</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 italic leading-relaxed relative z-10 flex-grow">"Treatment quality is very good here. All the pandemics protocol are being followed strictly. Specially Dr.Bhagawan is very polite and gentle in nature. Painless treatment is provided here."</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-1 text-accentYellow text-sm">
+                            ⭐⭐⭐⭐⭐ <span class="text-gray-500 text-xs font-bold ml-2">Google Review</span>
+                        </div>
+                    </div>
+
+                    <!-- Review 4 -->
+                    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative flex flex-col">
+                        <i data-lucide="quote" class="absolute top-6 right-8 w-10 h-10 text-topbar/10"></i>
+                        <div class="flex items-center gap-4 mb-6 relative z-10">
+                            <div class="w-12 h-12 bg-topbar/20 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="user" class="w-6 h-6 text-topbar"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue text-lg">Asit Kumar Pradhan</h4>
+                                <span class="text-xs text-gray-500 font-medium uppercase tracking-wider">Verified Patient</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-700 italic leading-relaxed relative z-10 flex-grow">"Such a good dental clinic in Boudh district. And the dentist, doctor Bhagyaban Meher sir is the best doctor I hv ever seen.I got my best treatment of my teeth. I m satisfied with Dr. Bhagyaban Meher sir. Thank you so much sir 🙏"</p>
+                        <div class="mt-6 pt-4 border-t border-gray-100 flex items-center gap-1 text-accentYellow text-sm">
+                            ⭐⭐⭐⭐⭐ <span class="text-gray-500 text-xs font-bold ml-2">Google Review</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-wrap gap-4 items-center justify-center mt-12 relative z-10">
+                    <a href="https://share.google/RuftIr19xLw2T3TCz" target="_blank" rel="noopener noreferrer" class="bg-white px-6 py-3 rounded-lg flex items-center gap-2 border border-gray-200 hover:border-topbar hover:shadow-md transition-all cursor-pointer">
+                        <span class="font-bold text-blue-600">Google</span> 
+                        <span class="text-sm text-gray-600 font-bold">5.0 ⭐⭐⭐⭐⭐</span>
+                    </a>
+                    <a href="https://www.justdial.com/Boudh/Shree-Sai-Dental-Clinic-Beside-Binapani-Medical-Store-Baudhgarh/9999P6843-6843-220309201949-M5L1_BZDET" target="_blank" rel="noopener noreferrer" class="bg-white px-6 py-3 rounded-lg flex items-center gap-2 border border-gray-200 hover:border-topbar hover:shadow-md transition-all cursor-pointer">
+                        <span class="font-bold text-orange-500">Justdial</span> 
+                        <span class="text-sm text-gray-600 font-bold">4.9 ⭐⭐⭐⭐⭐ <span class="text-xs text-gray-400 font-normal">(72 Reviews)</span></span>
+                    </a>
+                </div>
+                
+                <div class="mt-8 text-center relative z-10">
+                    <a href="https://share.google/RuftIr19xLw2T3TCz" target="_blank" rel="noopener noreferrer" class="inline-block bg-topbar hover:bg-primaryBlue text-white font-bold py-3 px-8 rounded shadow-md transition-colors uppercase tracking-wider text-sm">
+                        Review Now
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Form & Contact Area -->
+        <section id="contact" class="py-16 bg-white relative reveal">
+            <div class="max-w-6xl mx-auto px-4 md:px-8 flex flex-col md:flex-row gap-12 items-center">
+                
+                <!-- Left Info -->
+                <div class="md:w-1/2 w-full">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue mb-4">Book Your Visit Today</h2>
+                    <p class="text-sm text-gray-600 mb-8 leading-relaxed">Don't wait for dental pain to worsen. Schedule your appointment with Dr. Meher today for a comprehensive checkup and personalized treatment plan.</p>
+                    
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-heroBg p-3 rounded-full text-topbar shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue mb-1">Clinic Address</h4>
+                                <p class="text-sm text-gray-600">Redhakhol - Boudh - Phulbani Rd<br>Opp. Big V Mall, Baudhgarh,<br>Tetelenga, Odisha 762014</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-heroBg p-3 rounded-full text-topbar shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue mb-1">Call Us</h4>
+                                <a href="tel:+917000181963" class="text-sm text-gray-600 hover:text-topbar transition">+91 7000181963</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-heroBg p-3 rounded-full text-topbar shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-primaryBlue mb-1">Working Hours</h4>
+                                <p class="text-sm text-gray-600">Mon - Sat: Open 24 Hours<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Google Maps Embed -->
+                    <div class="w-full h-48 md:h-56 rounded-xl overflow-hidden shadow-sm border border-gray-100">
+                        <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Shree%20Sai%20Dental%20Clinic,%20Boudh,%20Odisha+(Shree%20Sai%20Dental%20Clinic)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Right Form -->
+                <div class="md:w-1/2 w-full">
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+                        <div class="bg-primaryBlue text-white text-center py-5 font-bold text-xl">
+                            Request Appointment
+                        </div>
+                        <!-- Updated Form with IDs and for attributes -->
+                        <form id="appointment-form" class="p-6 md:p-8 flex flex-col gap-4 bg-gray-50" onsubmit="handleFormSubmit(event)">
+                            <div>
+                                <label for="patientName" class="text-xs font-semibold text-primaryBlue mb-1.5 block uppercase tracking-wide">Name <span class="text-red-500">*</span></label>
+                                <input type="text" id="patientName" required placeholder="Full Name" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-topbar focus:ring-1 focus:ring-topbar text-sm bg-white shadow-sm">
+                            </div>
+                            <div>
+                                <label for="patientPhone" class="text-xs font-semibold text-primaryBlue mb-1.5 block uppercase tracking-wide">Phone <span class="text-red-500">*</span></label>
+                                <div class="flex shadow-sm rounded-lg overflow-hidden focus-within:ring-1 focus-within:ring-topbar focus-within:border-topbar border border-gray-200">
+                                    <span class="bg-gray-100 border-r border-gray-200 p-3 text-sm text-gray-500 flex items-center font-medium">🇮🇳 +91</span>
+                                    <input type="tel" id="patientPhone" required placeholder="Mobile Number" pattern="[0-9]{10}" minlength="10" maxlength="10" title="Please enter a valid 10-digit mobile number" class="w-full border-none p-3 focus:outline-none focus:ring-0 text-sm bg-white">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="appointmentDate" class="text-xs font-semibold text-primaryBlue mb-1.5 block uppercase tracking-wide">Preferred Date</label>
+                                <input type="date" id="appointmentDate" class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-topbar focus:ring-1 focus:ring-topbar text-sm text-gray-500 bg-white shadow-sm">
+                            </div>
+                            <div>
+                                <label for="patientProblem" class="text-xs font-semibold text-primaryBlue mb-1.5 block uppercase tracking-wide">Describe Your Problem</label>
+                                <textarea id="patientProblem" rows="3" placeholder="Briefly describe your symptoms or requested treatment..." class="w-full border border-gray-200 rounded-lg p-3 focus:outline-none focus:border-topbar focus:ring-1 focus:ring-topbar text-sm resize-none bg-white shadow-sm"></textarea>
+                            </div>
+                            <button type="submit" class="bg-topbar hover:bg-blue-500 text-white font-bold py-3.5 px-6 rounded-lg w-full mt-2 text-sm uppercase tracking-wider transition-colors shadow-md">Submit Request</button>
+                        </form>
+                        
+                        <!-- Success Message (Hidden initially) -->
+                        <div id="success-message" class="hidden p-8 flex flex-col items-center justify-center text-center bg-gray-50 h-[400px]">
+                            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                                <i data-lucide="check" class="w-8 h-8 text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-primaryBlue mb-2">Request Received!</h3>
+                            <p class="text-sm text-gray-600">Thank you for reaching out. Our team will contact you shortly to confirm your appointment time.</p>
+                            <button onclick="resetForm()" class="mt-6 text-sm text-topbar font-bold uppercase hover:underline">Book Another Appointment</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="insights" class="bg-heroBg/30 py-16 border-t border-gray-200 reveal">
+            <div class="max-w-6xl mx-auto px-4 md:px-8">
+                <div class="text-center mb-12">
+                    <div class="text-xs font-bold tracking-widest text-topbar uppercase mb-2">Dental Insights</div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primaryBlue">Our Latest Cases & Articles</h2>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Blog Card 1: Linked to Wisdom Tooth Article -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow group">
+                        <a href="wisdom-tooth-extraction.html" class="block h-[280px] w-full overflow-hidden bg-gray-50 flex items-center justify-center p-4">
+                            <img src="surgery.jpg" alt="Surgery Info" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </a>
+                        <div class="p-8">
+                            <div class="text-xs font-bold text-topbar uppercase tracking-wider mb-2">Education</div>
+                            <h3 class="font-bold text-primaryBlue text-xl mb-3 leading-snug group-hover:text-topbar transition-colors cursor-pointer">
+                                <a href="wisdom-tooth-extraction.html">Understanding Surgical Treatments & Wisdom Tooth Extraction</a>
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">Are you experiencing pain in your back molars? Learn about safe, effective, and painless wisdom tooth extractions performed at our clinic...</p>
+                            <a href="wisdom-tooth-extraction.html" class="font-bold text-topbar uppercase text-xs tracking-wider flex items-center gap-1 hover:text-primaryBlue transition-colors">Read Article <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Blog Card 2: Linked to Smile Restoration Case Study -->
+                    <div class="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-shadow group">
+                        <a href="case-study-smile-restoration.html" class="block h-[280px] w-full overflow-hidden bg-gray-50 flex items-center justify-center p-4">
+                            <img src="before after6.jpg" alt="Case Study" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+                        </a>
+                        <div class="p-8">
+                            <div class="text-xs font-bold text-topbar uppercase tracking-wider mb-2">Case Study</div>
+                            <h3 class="font-bold text-primaryBlue text-xl mb-3 leading-snug group-hover:text-topbar transition-colors cursor-pointer">
+                                <a href="case-study-smile-restoration.html">Why Shree Sai Dental Clinic is the No.1 Choice for Smile Restorations</a>
+                            </h3>
+                            <p class="text-sm text-gray-600 mb-6 leading-relaxed">See real before and after transformations and discover how Dr. Bhagyaban Meher expertly restores confidence and oral health...</p>
+                            <a href="case-study-smile-restoration.html" class="font-bold text-topbar uppercase text-xs tracking-wider flex items-center gap-1 hover:text-primaryBlue transition-colors">View Case Study <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primaryBlue text-white pt-16 border-t-4 border-topbar">
+        <div class="max-w-6xl mx-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            <!-- Footer Col 1 -->
+            <div>
+                <a href="#" class="flex items-center gap-3 mb-6 bg-white/10 p-3 rounded-xl w-max hover:bg-white/20 transition">
+                    <img src="logo.png" alt="Shree Sai Logo" class="h-10 bg-white rounded p-1" loading="lazy" decoding="async">
+                    <span class="text-white font-bold text-lg tracking-tight uppercase leading-tight">Shree Sai<br>Dental Clinic</span>
+                </a>
+                <p class="text-sm text-blue-100 leading-relaxed mb-6">Your trusted dental care partner in Boudh, providing comprehensive oral health solutions with advanced technology and personalized care by Dr. Bhagyaban Meher.</p>
+                
+                <div class="flex gap-3">
+                    <a href="https://www.facebook.com/people/Shree-Sai-Dental-ClinicBoudh/pfbid0x6GqB1AvP57QRhDPX7teSsArEgSN1K18ruYJoJhXMT5qm9uZxEMBzD9LKrvTQADnl/" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-topbar p-2 rounded-full transition-colors flex items-center justify-center" aria-label="Facebook">
+                        <!-- Official Multi-color Facebook SVG -->
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#1877F2"/>
+                            <path d="M15.36 12.07l.53-3.47h-3.33V6.35c0-.95.46-1.87 1.95-1.87h1.37V1.53c-.35-.06-1.46-.14-2.74-.14-2.82 0-4.63 1.7-4.63 4.78v2.43H5.56v3.47h2.95v8.38A12.09 12.09 0 0012 24a11.94 11.94 0 003.52-.52v-7.94h-3.05V12.07h2.89z" fill="#FFF"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/shree_sai_dental_clinic_boudh/" target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-topbar p-2 rounded-full transition-colors flex items-center justify-center" aria-label="Instagram">
+                        <!-- Official Multi-color Instagram SVG -->
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="2" y="2" width="20" height="20" rx="6" fill="url(#ig-grad-footer)"/>
+                            <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4z" fill="#FFF"/>
+                            <circle cx="17.5" cy="6.5" r="1.2" fill="#FFF"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v10a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H7z" fill="#FFF"/>
+                            <defs>
+                                <linearGradient id="ig-grad-footer" x1="2" y1="22" x2="22" y2="2" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FEC564"/>
+                                    <stop offset="0.5" stop-color="#E1306C"/>
+                                    <stop offset="1" stop-color="#833AB4"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/917000181963?text=Hello%20Dr.%20Meher%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="bg-white/10 hover:bg-topbar p-2 rounded-full transition-colors flex items-center justify-center" aria-label="WhatsApp">
+                        <!-- Official Multi-color WhatsApp SVG -->
+                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#25D366" d="M12 2C6.48 2 2 6.48 2 12c0 1.76.46 3.42 1.25 4.88L2 22l5.24-1.23A9.96 9.96 0 0012 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/>
+                            <path fill="#FFF" d="M16.5 13.5c-.25-.13-1.48-.73-1.71-.81-.23-.08-.4-.13-.57.13-.17.26-.65.81-.8 1-.15.18-.29.21-.54.08-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.76-.15-.26-.02-.4.1-.53.12-.12.25-.29.38-.44.13-.15.17-.26.25-.44.08-.18.04-.33-.02-.46-.06-.13-.57-1.38-.78-1.89-.2-.5-.4-.43-.57-.44h-.48c-.17 0-.44.06-.67.33-.23.26-.88.86-.88 2.1 0 1.24.9 2.44 1.02 2.62.13.17 1.77 2.7 4.29 3.79.6.26 1.07.42 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.48-.61 1.69-1.2.21-.59.21-1.1.15-1.21-.06-.11-.23-.18-.48-.3z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Col 2 -->
+            <div>
+                <h4 class="font-bold text-white text-lg mb-6 border-b border-white/20 pb-2 inline-block">Quick Links</h4>
+                <ul class="text-sm text-blue-100 space-y-3">
+                    <li><a href="#home" class="hover:text-topbar transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-topbar"></i> Home</a></li>
+                    <li><a href="#about" class="hover:text-topbar transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-topbar"></i> About Dr. Meher</a></li>
+                    <li><a href="#treatments" class="hover:text-topbar transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-topbar"></i> All Treatments</a></li>
+                    <li><a href="#testimonials" class="hover:text-topbar transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-topbar"></i> Patient Reviews</a></li>
+                    <li><a href="#contact" class="hover:text-topbar transition-colors flex items-center gap-2"><i data-lucide="chevron-right" class="w-3 h-3 text-topbar"></i> Contact Clinic</a></li>
+                </ul>
+            </div>
+
+            <!-- Footer Col 3 -->
+            <div>
+                <h4 class="font-bold text-white text-lg mb-6 border-b border-white/20 pb-2 inline-block">Contact Info</h4>
+                <ul class="text-sm text-blue-100 space-y-4">
+                    <li class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-topbar shrink-0"></i> 
+                        <span class="leading-relaxed">Redhakhol - Boudh - Phulbani Rd,<br>Opp. Big V mall, Baudhgarh,<br>Tetelenga, Odisha 762014</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="phone" class="w-5 h-5 text-topbar shrink-0"></i> 
+                        <a href="tel:+917000181963" class="font-medium text-white text-lg hover:text-topbar transition">+91-7000181963</a>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i data-lucide="mail" class="w-5 h-5 text-topbar shrink-0"></i> 
+                        <a href="mailto:shreesaidentalboudh@gmail.com" class="hover:text-topbar transition">shreesaidentalboudh@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Copyright Bar -->
+        <div class="bg-[#003865] text-blue-200 text-xs py-5 px-4 md:px-8 flex flex-col md:flex-row justify-between items-center text-center">
+            <div>© 2026 Shree Sai Dental Clinic, Boudh. All Rights Reserved.</div>
+            <div class="mt-2 md:mt-0 font-medium tracking-wide">Designed for excellence in Dental Care</div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS deferred to load after HTML parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Icons
+            lucide.createIcons();
+
+            // Initialize Swiper for Hero Section Background
+            var swiper = new Swiper(".myHeroSwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }
+            });
+
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Scroll Reveal Logic
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealOnScroll = () => {
+                for (let i = 0; i < revealElements.length; i++) {
+                    const windowHeight = window.innerHeight;
+                    const elementTop = revealElements[i].getBoundingClientRect().top;
+                    const elementVisible = 100;
+                    
+                    if (elementTop < windowHeight - elementVisible) {
+                        revealElements[i].classList.add('active');
+                    }
+                }
+            };
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger once on load
+
+            // Back to Top Logic
+            const backToTopBtn = document.getElementById('backToTop');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        backToTopBtn.classList.remove('hidden');
+                    } else {
+                        backToTopBtn.classList.add('hidden');
+                    }
+                });
+                
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // ScrollSpy Logic for Active Menu Links
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll("nav .hidden.md\\:flex a.nav-link");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section.getAttribute("id");
+                    }
+                });
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("text-topbar", "underline", "decoration-2", "underline-offset-4");
+                    if (link.getAttribute("href").includes(current) && current !== "") {
+                        link.classList.add("text-topbar", "underline", "decoration-2", "underline-offset-4");
+                    }
+                });
+            });
+        });
+
+        // Handle Appointment Form Submission (Simulated)
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent page reload
+            const form = document.getElementById('appointment-form');
+            const successMsg = document.getElementById('success-message');
+            
+            // Hide form, show success message
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }
+
+        // Reset the form to book another appointment
+        function resetForm() {
+            const form = document.getElementById('appointment-form');
+            const successMsg = document.getElementById('success-message');
+            
+            form.reset(); // Clear inputs
+            form.classList.remove('hidden');
+            successMsg.classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
